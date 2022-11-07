@@ -389,6 +389,120 @@ class Character extends FlxSprite
 				playAnim('idle');
 			default:
 				parseDataFile();
+			
+			case 'gf-crucified':
+				tex = Paths.getSparrowAtlas('sky/gf');
+				frames = tex;
+				animation.addByIndices('singUP', 'GF Dancing Beat Hair blowing CAR', [0], "", 24, false);
+				animation.addByIndices('danceLeft', 'GF idle', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
+				animation.addByIndices('danceRight', 'GF idle', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24,
+					false);	
+				
+				addOffset('danceLeft', 0);
+				addOffset('danceRight', 0);
+
+				playAnim('danceRight');
+				
+			case 'sky':
+				frames = Paths.getSparrowAtlas('sky/sky_assets');
+				animation.addByIndices('danceRight', 'sky idle', [0, 1, 2, 3, 4, 5, 6, 7], "", 24, false);
+				animation.addByIndices('danceLeft', 'sky idle', [8, 9, 10, 11, 12, 13, 14, 15], "", 24, false);
+				animation.addByPrefix('singUP', 'sky up', 24, false);
+				animation.addByPrefix('singDOWN', 'sky down', 24, false);
+				animation.addByPrefix('singLEFT', 'sky left', 24, false);
+				animation.addByPrefix('singRIGHT', 'sky right', 24, false);
+				
+				barColor = 0xFF9a00f8;
+				
+				addOffset('danceRight');
+				addOffset('danceLeft');
+				addOffset("singUP");
+				addOffset("singRIGHT");
+				addOffset("singLEFT");
+				addOffset("singDOWN");
+				
+				playAnim('danceRight');
+			
+			case 'sky-annoyed':
+				frames = Paths.getSparrowAtlas('sky/sky_annoyed_assets');
+				animation.addByIndices('danceRight', 'sky annoyed idle', [0, 1, 2, 3, 4, 5, 6, 7], "", 24, false);
+				animation.addByIndices('danceLeft', 'sky annoyed idle', [8, 9, 10, 11, 12, 13, 14, 15], "", 24, false);
+				animation.addByPrefix('singUP', 'sky annoyed up', 24, false);
+				animation.addByPrefix('singDOWN', 'sky annoyed down', 24, false);
+				animation.addByPrefix('singLEFT', 'sky annoyed left', 24, false);
+				animation.addByPrefix('singRIGHT', 'sky annoyed right', 24, false);
+				
+				animation.addByPrefix('oh', 'sky annoyed oh', 24, true);
+				animation.addByPrefix('grr', 'sky annoyed grr', 24, true);
+				animation.addByPrefix('huh', 'sky annoyed huh', 24, true);
+				animation.addByPrefix('ugh', 'sky annoyed ugh', 24, false);
+				animation.addByPrefix('manifest', 'sky annoyed manifest', 24, false);
+				
+				animation.addByIndices('danceRight-alt', 'sky annoyed alt idle', [0, 1, 2, 3, 4, 5, 6, 7], "", 24, false);
+				animation.addByIndices('danceLeft-alt', 'sky annoyed alt idle', [8, 9, 10, 11, 12, 13, 14, 15], "", 24, false);
+				animation.addByPrefix('singUP-alt', 'sky annoyed alt up', 24, false);
+				animation.addByPrefix('singDOWN-alt', 'sky annoyed alt down', 24, false);
+				animation.addByPrefix('singLEFT-alt', 'sky annoyed alt left', 24, false);
+				animation.addByPrefix('singRIGHT-alt', 'sky annoyed alt right', 24, false);
+				
+				barColor = 0xFF9a00f8;
+				
+				addOffset('danceRight');
+				addOffset('danceLeft');
+				addOffset("singUP");
+				addOffset("singRIGHT");
+				addOffset("singLEFT");
+				addOffset("singDOWN");
+				
+				addOffset("oh");
+				addOffset("grr");
+				addOffset("huh");
+				addOffset("ugh");
+				addOffset("manifest");
+				
+				addOffset('danceRight-alt');
+				addOffset('danceLeft-alt');
+				addOffset("singUP-alt");
+				addOffset("singRIGHT-alt");
+				addOffset("singLEFT-alt");
+				addOffset("singDOWN-alt");
+				
+				
+				playAnim('danceRight');
+				
+			case 'sky-mad':
+				frames = Paths.getSparrowAtlas('sky/sky_mad_assets');
+				animation.addByIndices('danceRight', 'sky mad idle', [0, 1, 2, 3, 4, 5, 6, 7], "", 24, false);
+				animation.addByIndices('danceLeft', 'sky mad idle', [8, 9, 10, 11, 12, 13, 14, 15], "", 24, false);
+				animation.addByPrefix('singUP', 'sky mad up', 24, false);
+				animation.addByPrefix('singDOWN', 'sky mad down', 24, false);
+				animation.addByPrefix('singLEFT', 'sky mad left', 24, false);
+				animation.addByPrefix('singRIGHT', 'sky mad right', 24, false);
+				
+				animation.addByIndices('danceRight-alt', 'sky mad idle', [0, 1, 2, 3, 4, 5, 6, 7], "", 24, false);
+				animation.addByIndices('danceLeft-alt', 'sky mad idle', [8, 9, 10, 11, 12, 13, 14, 15], "", 24, false);
+				animation.addByPrefix('singUP-alt', 'sky mad up', 24, false);
+				animation.addByPrefix('singDOWN-alt', 'sky mad down', 24, false);
+				animation.addByPrefix('singLEFT-alt', 'sky mad left', 24, false);
+				animation.addByPrefix('singRIGHT-alt', 'sky mad right', 24, false);
+				
+				barColor = 0xFF9a00f8;
+				
+				addOffset('danceRight-alt');
+				addOffset('danceLeft-alt');
+				addOffset("singUP-alt");
+				addOffset("singRIGHT-alt");
+				addOffset("singLEFT-alt");
+				addOffset("singDOWN-alt");
+				
+				addOffset('danceRight');
+				addOffset('danceLeft');
+				addOffset("singUP");
+				addOffset("singRIGHT");
+				addOffset("singLEFT");
+				addOffset("singDOWN");
+				
+				playAnim('danceRight');	
 		}
 
 		if (curCharacter.startsWith('bf'))
